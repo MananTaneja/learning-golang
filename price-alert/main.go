@@ -19,8 +19,6 @@ type Response struct {
 func amazonHandler() http.HandlerFunc {
 
 	return func(w http.ResponseWriter, r *http.Request) {
-		fmt.Println("inside the amazon api handler")
-
 		var body RequestBody
 
 		err := json.NewDecoder(r.Body).Decode(&body)
